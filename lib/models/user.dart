@@ -7,7 +7,6 @@ required this.name,
 required this.email,
 this.isLoggedIn = false,
 });
-// Konversi ke Map untuk disimpan
 Map<String, dynamic> toMap() {
 return {
 'name': name,
@@ -15,7 +14,6 @@ return {
 'isLoggedIn': isLoggedIn,
 };
 }
-// Buat User dari Map
 factory User.fromMap(Map<String, dynamic> map) {
 return User(
 name: map['name'] ?? '',
@@ -23,7 +21,6 @@ email: map['email'] ?? '',
 isLoggedIn: map['isLoggedIn'] ?? false,
 );
 }
-// Copy with untuk update sebagian
 User copyWith({
 String? name,
 String? email,
@@ -36,3 +33,6 @@ isLoggedIn: isLoggedIn ?? this.isLoggedIn,
 );
 }
 }
+
+
+
